@@ -58,7 +58,7 @@ it will find files from the project root, which is cool, but its not relative to
 your current file, so not quite what we want.
 
 ## Using this plugin
-This plugin, auto-saves the directory you opened vim from into the `p` register.
+This plugin auto-saves the directory you opened vim from into the `p` register.
 Then, when you're in a file you want to auto-complete a filepath from, you
 `<leader>rp` (relative path) and then type your `../<C-x C-f>` to get relative
 path autocomplete suggestions.
