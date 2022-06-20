@@ -1,10 +1,11 @@
 " save the project path when vim opens
 autocmd TermResponse * :let @p=@%
 
-" relative path (change directory to current file)
-nnoremap <leader>rp setRelativePath
+" keybinding to set relative path change directory to current file
+" (so your relative file import works)
+nnoremap <leader>rp :call fn#SetRelativePath()<cr>
 
-" -- keybinding to re-set project path as path for current file
-"    (so your fuzzy finder works)
-nnoremap <leader>pp setProjectPath
+" keybinding to re-set project path as path for current file
+" (so your fuzzy finder works across entire project)
+nnoremap <leader>pp :call fn#SetProjectPath()<cr>
 
