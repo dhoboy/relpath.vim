@@ -1,5 +1,5 @@
 " save the project path when vim opens
-autocmd TermResponse * :let @p=@%
+autocmd VimEnter * let @p = expand('%:p:h')
 
 " keybinding to set relative path change directory to current file
 " (so your relative file import works)
