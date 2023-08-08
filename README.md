@@ -61,7 +61,21 @@ your current file, so not quite what we want.
 This plugin auto-saves the directory you opened vim from into the `p` register.
 Then, when you're in a file you want to auto-complete a filepath from, you
 `<leader>rp` (relative path) and then type your `../<C-x C-f>` to get relative
-path autocomplete suggestions.
+path autocomplete suggestions. You can move through the list of suggestions
+with `<C-p>` for previous and `<C-n>` for next. If you want to move to a different level
+and don't want any of the suggestions, you can `<C-p>` to get nothing to appear,
+type ../ again and `<C-x C-f>` again. Repeat until you get to your desired level.
+
+Try out these remaps for a smoother experience:
+```
+inoremap <Tab> <C-x><C-f>
+inoremap <S-Tab> <C-p>../<C-x><C-f>
+```
+
+With these remaps, in insert mode you can type Tab to see file autocomplete suggestions, and
+Shift-Tab to move up one level and show autocomplete suggestions.
+Drop the Tab remap if you need Tab (I may drop it myself) and just use the Shift Tab
+remap to move up through the levels.
 
 When you're done, and want your fuzzy finder to work again, you type `<leader>pp`
 (project path) and you're all set!
@@ -72,3 +86,4 @@ hence the `pp` (project path) naming.
 
 Developed with neovim v0.7 and Telescope.
 
+Rest in Peace Bram.
